@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>素拓活动汇总平台</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#activities">跳转到活动列表</a>
+  <header class="site-header">
+    <a class="brand" href="#top"><img class="brand-logo" src="./statistics-college.jpg" alt="统计学院院徽"><span>统计学院<strong>学业规划平台</strong></span></a>
+    <nav aria-label="页面导航"><a href="#activities">活动目录</a><a href="#summary">活动统计</a></nav>
+    <span class="local-label">本地保存</span>
+  </header>
+  <main id="top">
+    <section class="hero-section" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <h1 id="page-title">素拓活动汇总平台</h1>
+        <p>汇总素拓活动，查看签到方式与可认定的学时、学分。</p>
+        <aside class="agent-panel" aria-labelledby="workbench-title">
+          <p class="panel-label">素拓活动 · 录入与认定</p>
+          <h2 id="workbench-title">活动工作台</h2>
+          <p class="panel-desc">录入活动安排和认定信息，保存后即可在活动目录查看。</p>
+          <div class="upload-actions"><a class="text-button" href="#activities">浏览全部活动</a><button class="primary-button" data-new>＋ 上传活动</button></div>
+          <a class="panel-foot-link" href="https://xwzx.ruc.edu.cn/auth/login" target="_blank" rel="noopener noreferrer">打开学务中心 <span aria-hidden="true">↗</span></a>
+        </aside>
+      </div>
+      <figure class="timeline-card" aria-label="素拓活动海报示例">
+        <img src="./activity-examples.jpg" alt="素拓活动海报示例：乡村振兴北京论坛、中国人民大学模拟联合国校际交流会围炉夜话等活动海报">
+      </figure>
+    </section>
+    <section class="metrics-section" id="summary" aria-label="活动统计">
+      <div class="metric"><span>全部活动</span><strong id="total">0<small>场</small></strong></div>
+      <div class="metric"><span>可认定学时合计</span><strong id="hours">0<small>学时</small></strong></div>
+      <div class="metric"><span>可认定学分合计</span><strong id="credits">0<small>学分</small></strong></div>
+    </section>
+    <section class="curriculum-section" id="activities" aria-labelledby="list-title">
+      <aside class="curriculum-sidebar">
+        <div class="sidebar-heading"><h2>活动分类</h2></div>
+        <nav class="module-nav" id="categories" aria-label="按类别筛选"></nav>
+      </aside>
+      <section class="curriculum-content">
+        <div class="toolbar"><h2 id="list-title">全部活动</h2><span class="muted" id="results" role="status"></span></div>
+        <div class="course-toolbar filters">
+          <div class="search-row">
+            <svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+            <input id="search" type="search" placeholder="搜索活动名称、地点或内容" aria-label="搜索活动">
+          </div>
+          <select id="time" aria-label="按时间筛选"><option value="">全部时间</option><option value="upcoming">尚未开始</option><option value="started">已经开始</option></select>
+        </div>
+        <div id="list"></div>
+      </section>
+    </section>
+    <p id="status" role="status"></p>
+  </main>
+  <dialog id="editor" aria-labelledby="editor-title">
+    <div class="dialog-head toolbar"><h2 id="editor-title">上传活动</h2><button type="button" data-close aria-label="关闭录入窗口">关闭</button></div>
+    <form id="form" class="dialog-body stack">
+      <label class="field">活动名称 <input name="title" required maxlength="120" autofocus></label>
+      <div class="grid">
+        <label class="field">活动地点 <input name="location" required maxlength="160"></label>
+        <label class="field">活动开始时间 <input name="start" type="datetime-local" required></label>
+        <label class="field">活动类别 <select name="category" required></select></label>
+        <label class="field">签到方式 <input name="checkin" placeholder="如现场扫码、纸质签到" required maxlength="160"></label>
+        <label class="field">可认定学时 <input name="hours" type="number" min="0" max="9999" step="0.01" placeholder="选填"></label>
+        <label class="field">可认定学分 <input name="credits" type="number" min="0" max="9999" step="0.01" placeholder="选填"></label>
+      </div>
+      <label class="field">活动内容 <textarea name="description" required rows="4" maxlength="5000"></textarea></label>
+      <p class="error" id="error" role="alert"></p>
+      <div class="actions"><button type="submit" class="primary">保存活动</button><button type="button" data-close>取消</button></div>
+    </form>
+  </dialog>
+  <dialog id="detail" aria-labelledby="detail-title">
+    <div class="dialog-head toolbar"><h2 id="detail-title">活动详情</h2><button type="button" data-close aria-label="关闭详情窗口">关闭</button></div>
+    <div class="dialog-body stack"><dl id="detail-fields"></dl><div class="actions"><button id="edit" type="button">编辑活动</button></div></div>
+  </dialog>
+</body>
+</html>

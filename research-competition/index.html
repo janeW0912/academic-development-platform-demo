@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="统计学院科研竞赛指南：查看数学建模、学术研究、市场调查等项目的常规参赛时间与准备方法。">
+  <meta name="theme-color" content="#f5dcd9">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <title>科研竞赛指南｜统计学院</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./src/main.js"></script>
+<base target="_blank">
+</head>
+<body>
+    <a href="../" style="position:fixed;right:16px;bottom:16px;z-index:1000;padding:8px 12px;border-radius:6px;background:#fff;color:#77100e;border:1px solid #77100e;font:14px system-ui">返回平台首页</a>
+  <a class="skip-link" href="#competitions">跳转到竞赛目录</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="科研竞赛规划首页">
+      <img class="brand-logo" src="./tongyuan.jpg" alt="统计学院院徽">
+      <span>统计学院<strong>学业规划平台</strong></span>
+    </a>
+    <nav aria-label="页面导航">
+      <a href="#competitions">竞赛指南</a>
+      <a href="#faculty-research">教师科研</a>
+    </nav>
+    <a class="header-agent" href="https://www.coze.cn/store/agent/7710091039767347240?bot_id=true" target="_blank" rel="noopener noreferrer">问智能体 <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero-section" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <h1 id="page-title">科研竞赛规划</h1>
+        <p>打破信息差，提早规划。</p>
+        <aside class="agent-panel" aria-labelledby="agent-title">
+          <p class="panel-label">扣子智能体 · 走向世界</p>
+          <h2 id="agent-title">学业咨询智能体</h2>
+          <p>关于推免流程、竞赛科研、人大以及复交夏令营项目，也可以直接问问智能体。</p>
+          <a class="primary-button" href="https://www.coze.cn/store/agent/7710091039767347240?bot_id=true" target="_blank" rel="noopener noreferrer">开始对话 <span aria-hidden="true">↗</span></a>
+          <small>将在新窗口打开</small>
+        </aside>
+      </div>
+      <figure class="timeline-card" aria-label="科研竞赛月历时间一览图">
+        <img src="./timeline.jpg" alt="科研竞赛月历：1月至12月重要科研竞赛月份安排">
+      </figure>
+    </section>
+    <a class="text-link hero-link" href="#competitions" aria-label="下滑到竞赛目录">查看竞赛与项目 <span aria-hidden="true">↓</span></a>
+
+    <section class="competition-section" id="competitions" aria-labelledby="list-title">
+      <aside class="competition-sidebar">
+        <div class="sidebar-heading">
+          <p>COMPETITION INDEX</p>
+          <h2>竞赛目录</h2>
+        </div>
+        <nav class="category-nav" id="categories" aria-label="按竞赛类别筛选"></nav>
+        <p class="sidebar-tip">点击竞赛名称，查看参赛指南与准备建议。</p>
+      </aside>
+      <div class="competition-content">
+        <div class="toolbar">
+          <h2 id="list-title" tabindex="-1">竞赛与项目</h2>
+          <span class="muted" id="results" role="status"></span>
+        </div>
+        <div class="search-row">
+          <svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+          <input id="search" type="search" placeholder="搜索竞赛名称、赛制或准备关键词" aria-label="搜索竞赛与项目" autocomplete="off">
+        </div>
+        <div id="competition-list" class="competition-list"></div>
+      </div>
+    </section>
+
+    <section class="faculty-section" id="faculty-research" aria-labelledby="faculty-title">
+      <div class="faculty-heading">
+        <p>RESEARCH WITH FACULTY</p>
+        <h2 id="faculty-title">加入课题组<br><span>进行初步科研探索</span></h2>
+        <p class="faculty-intro">竞赛之外，也可以参与本院教师的科研项目。先从文献阅读、参与组会、了解正式科研流程开始，在持续参与中逐步积累研究经验。</p>
+        <a class="secondary-button" href="http://stat.ruc.edu.cn/szdw/zzjsjl/axx/index.htm" target="_blank" rel="noopener noreferrer">查看主页 <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="faculty-content">
+        <ol class="faculty-steps">
+          <li><strong>学院平台</strong><span><a href="https://mp.weixin.qq.com/s/OmQZk56cl8OBvQdo7nQt0w" target="_blank" rel="noopener noreferrer">数据科学与人工智能研创训练平台</a></span></li>
+          <li><strong>个人联系心仪导师</strong><span>通过邮件介绍专业背景、已掌握的技能和兴趣方向，询问是否有参与课题组的机会。</span></li>
+          <li><strong>优秀师兄师姐经验</strong><span>详情可参考统计学院《飞跃手册》。</span></li>
+        </ol>
+        <p class="faculty-note">参与科研后，可由指导教师出具相关证明，再由学院根据实际工作与成果统一评定。具体认定方式以本学院当年推免实施细则为准。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div><strong>学业规划平台</strong><p>科研经历与科研加分并不完全等同，请提前阅读本学院最新推免实施细则。</p></div>
+    <a class="text-link" href="#top">回到顶部 <span aria-hidden="true">↑</span></a>
+  </footer>
+
+  <dialog id="guide-dialog" aria-labelledby="guide-title">
+    <div class="dialog-head">
+      <p id="guide-category"></p>
+      <button type="button" class="close-button" data-close aria-label="关闭参赛指南">
+        <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="dialog-body">
+      <h2 id="guide-title"></h2>
+      <div class="guide-time"><span>常规参赛时间</span><strong id="guide-time"></strong></div>
+      <section aria-labelledby="about-title"><h3 id="about-title">这项竞赛做什么</h3><p id="guide-overview"></p></section>
+      <dl id="guide-facts" class="guide-facts"></dl>
+      <section aria-labelledby="prepare-title"><h3 id="prepare-title">需要如何准备</h3><ol id="guide-preparation" class="preparation-list"></ol></section>
+      <section aria-labelledby="timeline-title"><h3 id="timeline-title">关键时间安排</h3><div id="guide-timeline" class="guide-timeline"></div></section>
+      <p class="dialog-note">以上依据所提供的科研素材整理。赛制、报名和加分认定可能调整，请以当年官方通知及本学院推免细则为准。</p>
+    </div>
+  </dialog>
+  <div id="live-status" class="sr-only" role="status" aria-live="polite"></div>
+</body>
+</html>
